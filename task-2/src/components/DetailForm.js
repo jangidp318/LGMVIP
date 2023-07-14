@@ -45,6 +45,13 @@ export default function DetailForm(props) {
         
     } 
 
+    const handleClear = () => {
+        setName('')
+        setEmail('')
+        setWebsite('')
+
+    }
+
     return(
         <form>
         <table>
@@ -87,7 +94,7 @@ export default function DetailForm(props) {
             </tr>
             </table>
             <button className='btn btn-primary' onClick={handleSubmit} type='submit'>Enroll Student</button>
-            <button className='btn btn-danger'  type='reset'>Clear</button>
+            <button className='btn btn-danger'  type='reset' onClick={handleClear}>Clear</button>
         </form>
     )
 }
